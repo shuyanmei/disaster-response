@@ -16,23 +16,14 @@ In this project, I analyzed disaster data from Figure Eight to build a model for
 
 ### Files
 1. ETL Pipeline
-data/process_data.py is a data cleaning pipeline that:
 
-Loads the messages and categories datasets
-Merges the two datasets
-Cleans the data
-Stores it in a SQLite database
+data/process_data.py is a data cleaning pipeline that loads the messages and categories datasets, merges them together and store it into a SQLite database after cleaning.
 
 2. ML Pipeline
-model/train_classifier.py is a machine learning pipeline that:
 
-Loads data from the SQLite database
-Splits the dataset into training and test sets
-Builds a text processing and machine learning pipeline
-Trains and tunes a model using GridSearchCV
-Outputs results on the test set
-Exports the final model as a pickle file(there is a 100mb limit, so the pickle file is not uploaded here)
+model/train_classifier.py is a machine learning pipeline that load, split the data and train, tune, evaluate and write the model.(There is a 100mb limit, so the pickle file is not uploaded here)
 
 3. Web App
+
 app/run.py is the flask code for the web app and data visualizations.
 app/template/html are the html files
